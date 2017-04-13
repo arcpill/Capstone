@@ -39,6 +39,23 @@
 
 <script>
 
+//Validate Input
+
+function ValidationEvent(e) {
+	 cosole.log( "In validate form ");
+
+ var x = document.forms["registerForm"]["email"].value;
+ var atpos = x.indexOf("@");
+ var dotpos = x.lastIndexOf(".");
+ if (atpos<1 || dotpos<atpos+2 || dotpos+2>= x.length) {
+     alert("Not a valid e-mail address");
+     return false;
+ }
+ else{
+	 return true;
+ }
+}
+
 //In case of AJAX calls to Server with JSON Object --> EXTRA
 /* function login(){  
 
@@ -80,20 +97,20 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Start Bootstrap</a>
+                <a href="#top" onclick=$("#menu-close").click();>Start</a>
             </li>
             <li>
                 <a href="#top" onclick=$("#menu-close").click();>Home</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>About</a>
+                <a href="#about" onclick=$("#menu-close").click();>Register</a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#services" onclick=$("#menu-close").click();>Services</a>
             </li>
             <li>
                 <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
-            </li>
+            </li> -->
             <li>
                 <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
             </li>
@@ -104,7 +121,7 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>NPU Engage</h1>
-            <h3>TBD tagline</h3>
+            <h3>Jump-start your career</h3>
             <br>
             <div class="loginmodal-container">
 				  <!-- IF AJAX call the use action="javascript:login()" -->
@@ -115,9 +132,9 @@
 				  </form>
 					
 				  <div class="login-help">
-					<a href="#about">Register</a>
+					<a href="#about"><strong>Register</strong></a>
 				  </div>
-				  <div id = "error" class="login-help" style="color: red"><h4>${errors}</h4></div>
+				  <div id = "error" style="color: blue"><h6>${errors}</h6></div>
 			</div>
         </div>
     </header>
@@ -141,7 +158,7 @@
      <div class="container">
             <div class="row text-center">
 				<div class="loginmodal-container">
-				  <form action="./processJobSeekerRegistrationRequest" method="POST" commandName="jobseeker">
+				  <form action="./processJobSeekerRegistrationRequest" method="POST" commandName="jobseeker" name = "registerForm">
 					<input type="text" name="firstName" placeholder="FirstName">
 					<input type="text" name="lastName" placeholder="LastName">
 					<input type="text" name="email" placeholder="EmailID">
@@ -325,8 +342,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
-
-   //Ready Login Error
+ 
+    //Ready Login Error
 
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {

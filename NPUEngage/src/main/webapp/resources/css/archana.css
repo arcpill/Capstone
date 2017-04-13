@@ -97,7 +97,7 @@ html {
 } 
 
 .login-help{
-  font-size: 12px;
+  font-size: 15px;
 }
 /****** LOGIN MODAL End******/
 
@@ -112,9 +112,9 @@ height: 30%;
 position:fixed;
 text-align: center;
 font-style: italic;
-color: #6C4616;
+color: #ffffff;
 right:10px;
-top: 10px ;
+top: 10px ;	
 }
 .topcorner .profile-img{	
 position:fixed;
@@ -128,9 +128,17 @@ height: 100px;
 
 /* home page start*/
 .textarea {
-	height: 400px;
+	height: 700px;
     width: 100%;
     background-color: #C8E3F8;
+}
+
+/* post job button */
+
+.postjob_btn{
+	
+		right:20px;
+		top: 10px ;
 }
 
 .search {
@@ -167,8 +175,14 @@ height: 100px;
 	width: 100%;	
 	height: 44px;
    font-size: 20px;
-
 }
+
+.mycontainer .searchbtn{
+	width: 100%;	
+	height: 44px;
+   font-size: 20px;
+}
+
 
 /* home page end*/
 
@@ -176,7 +190,8 @@ height: 100px;
 
 #profile_box {
   display: block;
-  width: 750px; 
+  width: 60%;
+  height: auto; 
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 45px;
@@ -292,7 +307,7 @@ height: 100px;
 
 
 .fileupload{
-  height: 100px;
+  height: auto;
   font-size: 16px;
   width: 100%;
   margin-bottom: 10px;
@@ -306,5 +321,128 @@ height: 100px;
   -moz-box-sizing: border-box;
 }
 
+.resume_submit{
+	background-color: #0000FF;
+	width: 20%;
+	display: block;
+}
 
+.exp_textarea {
+
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    wrap: off;
+    overflow: hidden;
+    outline: none;
+	/* overflow-y: auto;
+	word-wrap:break-word */
+}
+
+.editProfileDet{
+	align: center;
+	width: 300%;
+	min-height: 200px; 
+	display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ 
+}
+
+/* The Close Button */
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 50px;;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #0080ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close2 {
+    color: #ffffff;
+    float: right;
+    font-size: 50px;;
+    font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #0080ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h3.profilepopup{
+color: #ffffff;
+}
+
+.bluefont{
+text-color: #ffffff;
+}
 /* profile page end*/
+
+/* top naigation bar */
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  display: block;
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav input[type=text] {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.topnav img{
+	
+  float: left;
+  display: block;
+  width: 4%; 
+  height: 4%; 
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+

@@ -6,4 +6,5 @@ public interface JobSeekerDao {
 
 	public void insertJobSeeker(JobSeeker jobseeker);
 	public boolean checkJobSeekerCrediential(JobSeeker jobseeker);
+	public long getJobSeekerID(JobSeeker jobseeker);
 }
